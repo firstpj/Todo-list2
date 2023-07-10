@@ -56,7 +56,7 @@ Installed node.js and any IDE like Visual Studio Code.
 ### Setup
 
 Clone this repository to your desired folder:
-https://github.com/firstpj/Todo-List-1.git
+https://github.com/firstpj/Todo-List-2.git
 
 Change directory Todo-List in your terminal
 ### Install
