@@ -1,0 +1,49 @@
+.body-container {
+  padding: 22%;
+  padding-top: 2%;
+  background-color: #d4dbaf;
+  color: #020202;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.toDo-list {
+  width: 56%;
+  background-color: #ddd;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  align-items: center;
+}
+
+.inputs-field {
+  height: 3rem;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.list-properties {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.left-items {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#clear-btn {
+  height: 2.5rem;
+  border: none;
+  margin: auto;
+}
