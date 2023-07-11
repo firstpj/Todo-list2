@@ -1,49 +1,48 @@
 import './style.css';
+import {
+  getTodoList, addItem, markCompleted, removeItem, removeCompletedItems, editItem,
+} from './todoList.js';
+import displayToDoList from './display.js';
 
-// Get DOM
-const listElement = document.createElement('div');
-listElement.classList = 'dynamic-container';
-const listContainer = document.querySelector('.list');
-
-const task = [
-  {
-    description: 'itema',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'itemb',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'itemc',
-    completed: false,
-    index: 4,
-  },
-  {
-    description: 'itemd',
-    completed: false,
-    index: 3,
-  },
-];
-
-function iterateTasks() {
-  const sortedTasks = task.sort((a, b) => a.index - b.index);
-  sortedTasks.forEach((item) => {
-    listElement.innerHTML
-        += `
-        <div class="list-properties">
-            <span class="left-items">
-                <input type="checkbox">
-                <p>${item.description}</p>
-            </span>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-        </div>
-        <hr>
-        `;
-  });
-
-  listContainer.appendChild(listElement);
-}
-iterateTasks();
+const inputItem = document.querySelector('.inputs-field');
+const addButton = document.querySelector('.add-btn');
+const clearAll = document.querySelector('#clear-btn');
+let editIndex = -1;
+addButton.addEventListener('click', () => {
+  if (editIndex === -1) {
+    addItem(inputItem.value);
+  } else {
+    editItem(editIndex, inputItem.value);
+    editIndex = -1;
+    addButton.textContent = 'Add';
+  }
+  inputItem.value = '';
+  displayToDoList(getTodoList());
+});
+clearAll.addEventListener('click', () => {
+  removeCompletedItems();
+  displayToDoList(getTodoList());
+});
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('complete-btn')) {
+    const itemIndex = parseInt(event.target.dataset.index, 10);
+    markCompleted(itemIndex);
+    displayToDoList(getTodoList());
+  }
+});
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-btn')) {
+    const itemIndex = parseInt(event.target.dataset.index, 10);
+    removeItem(itemIndex);
+    displayToDoList(getTodoList());
+  }
+});
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('edit-btn')) {
+    const itemIndex = parseInt(event.target.dataset.index, 10);
+    inputItem.value = getTodoList()[itemIndex].description;
+    editIndex = itemIndex;
+    addButton.textContent = 'Save';
+  }
+});
+displayToDoList(getTodoList());
