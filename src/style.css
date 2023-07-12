@@ -1,26 +1,37 @@
 body {
-  background-color: #ada1a1;
+  background-color: #ece2e2;
 }
 
-.Bg-field {
-  background-color: #c29d9d;
-  color: #9fafd4;
+.bg-container {
+  background-color: #cab7b7;
+  color: #0c0903;
   text-align: center;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 20px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 .toDo-list {
   width: 60%;
-  background-color: #fff;
+  background-color: #189b4a;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+
 .intro {
   display: flex;
   justify-content: space-between;
-  padding-inline: 2rem;
+  padding-inline: 3rem;
   align-items: center;
 }
 
@@ -28,32 +39,43 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-}
+ }
 
 .inputs-field {
   height: 3rem;
   border: none;
   outline: none;
-  padding-inline: 2rem;
+  margin-left: 3em;
+  padding-left: rem;
   width: 80%;
 }
+
 
 .input2 {
   height: 3rem;
   outline: none;
-  padding-inline: 0.2rem;
+
+  margin-right: 3rem;
   width: 80%;
   font-size: 1.5rem;
   color: #b2bedb;
 }
 
+.list-properties {
+  padding: 1px;
+  padding-top: 4px;
+  border-radius: 2em;
+  margin-block-end: 2em;
+  
+}
+
 .add-btn {
-  height: 3rem;
+  height:3rem;
   width: 3rem;
+  padding-bottom: 1.5em;
   color: #aab4cc;
   font-size: 2.5rem;
-  background-color: #fff;
+  background-color: #573db3;
   border: none;
 }
 
@@ -69,6 +91,7 @@ body {
   display: flex;
   gap: 0.5rem;
 }
+
 
 #clear-btn {
   height: 2.5rem;

@@ -1,8 +1,8 @@
-import './style.css';
 import {
+  displayToDoList,
   getTodoList, addItem, markCompleted, removeItem, removeCompletedItems, editItem,
 } from './todoList.js';
-import displayToDoList from './display.js';
+import './style.css';
 
 const inputItem = document.querySelector('.inputs-field');
 const addButton = document.querySelector('.add-btn');
@@ -17,18 +17,18 @@ addButton.addEventListener('click', () => {
     addButton.textContent = 'Add';
   }
   inputItem.value = '';
-  displayToDoList(getTodoList());
+  displayToDoList();
 });
 clearAll.addEventListener('click', () => {
   removeCompletedItems();
-  displayToDoList(getTodoList());
+  displayToDoList();
 });
 // Event listener for marking an item as finished
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('complete-btn')) {
     const itemIndex = parseInt(event.target.dataset.index, 10);
     markCompleted(itemIndex);
-    displayToDoList(getTodoList());
+    displayToDoList();
   }
 });
 // Event listener for disposing of an object
@@ -36,7 +36,7 @@ document.addEventListener('click', (event) => {
   if (event.target.classList.contains('remove-btn')) {
     const itemIndex = parseInt(event.target.dataset.index, 10);
     removeItem(itemIndex);
-    displayToDoList(getTodoList());
+    displayToDoList();
   }
 });
 // Event listener for enhancing an object
