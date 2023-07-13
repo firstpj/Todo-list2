@@ -106,6 +106,8 @@ Give a star if you like this project if you like it!
 
 I want to give special thanks to Microverse for the great opportunity given to me to realise my dreams.
 
+This project is [MIT](./LICENSE) licensed.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
