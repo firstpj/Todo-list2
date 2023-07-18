@@ -7,7 +7,27 @@
   text-align: center;
 }
 
-.toDo-list {
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+  font-family: "Font Awesome 6 Free";
+  }
+
+  .fa-solid, .fas {
+    font-weight: 900;
+    padding-left: 45rem;
+  }
+  
+  h3 {
+    display: block;
+    padding-right: 34em;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  
+  .toDo-list {
   max-height: 80vh;
   width: 60%;
   background-color: #6dc00f;
