@@ -1,80 +1,66 @@
-body {
-  background-color: #ece2e2;
+* {
+  box-sizing: border-box;
 }
 
-.bg-container {
-  background-color: #cab7b7;
-  color: #0c0903;
+.backgd-container {
+  color: #272a31;
   text-align: center;
 }
 
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 20px;
-  margin-inline-end: 0;
-  font-weight: bold;
-}
-
 .toDo-list {
+  max-height: 80vh;
   width: 60%;
-  background-color: #189b4a;
+  background-color: #6dc00f;
   margin: auto;
   display: flex;
+  border: 1px solid #242020;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .intro {
   display: flex;
   justify-content: space-between;
-  padding-inline: 3rem;
+  padding-inline: 2rem;
   align-items: center;
 }
 
-.enter-records {
+.input-data {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
 }
 
 .inputs-field {
   height: 3rem;
   border: none;
   outline: none;
-  margin-left: 3em;
+  padding-inline: 2rem;
   width: 80%;
 }
 
 .input2 {
   height: 3rem;
+  border: none;
   outline: none;
-  margin-right: 3rem;
+  padding-inline: 0.2rem;
   width: 80%;
   font-size: 1.5rem;
-  color: #b2bedb;
-}
-
-.list-properties {
-  padding: 1px;
-  padding-top: 4px;
-  border-radius: 2em;
-  margin-block-end: 2em;
+  color: #272a31;
 }
 
 .add-btn {
   height: 3rem;
   width: 3rem;
-  padding-bottom: 1.5em;
-  color: #aab4cc;
+  color: #272a31;
   font-size: 2.5rem;
-  background-color: #573db3;
+  background-color: #fff;
   border: none;
 }
 
-.each-aspects {
+.both-sides {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,12 +68,26 @@ h3 {
   background-color: #fff;
 }
 
-.left-objects {
+.left-items {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.right-items {
   display: flex;
   gap: 0.5rem;
 }
 
 #clear-btn {
-  height: 2.5rem;
+  height: 3rem;
+  width: 40%;
   border: none;
+  background-color: #ddd;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.line-1 {
+  width: 100%;
+  border: 0.02px solid #ddd;
 }
